@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 import ContentSection from "~/components/content-section.astro";
 import ShowcaseCard from "~/components/showcase-card.astro";
+import { Icon } from "astro-icon/components";
+import type { FeatureItem } from "~/types";
 
 const featuredSites = await getCollection(
   "showcase",
@@ -12,12 +14,29 @@ const orderedSites = featuredSites.sort(
 );
 ---
 
-<ContentSection title="Showcase" id="showcase">
+<ContentSection title="Conexión 2024" id="showcase">
   <Fragment slot="lead">
-    Astro is <span class="text-primary">versatile</span>.{" "}
-    <span class="text-primary">Explore</span> what's possible and get{" "}
-    <span class="text-primary">inspired</span>.
+    49 fondos de inversión de 16 países, <span class="text-primary">más de 4K asistentes</span>,
+    25 conferencias, 49 speakers, 35 masterclasses, 8 universidades,
+    <span class="text-primary">21 emprendimientos universitarios y 25 startups</span>
+    cerrando negocios en <span class="text-primary">3 rondas de inversión</span>.
   </Fragment>
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+    <a
+      href="https://www.youtube.com/watch?v=GGl2biJ4KDk"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    >
+      <Icon name="mdi:rocket" class="size-8" />
+      <span>Video 2024</span>
+    </a>
+    <!-- <a
+      href="https://astro.new/"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    >
+      <Icon name="mdi:telescope" class="size-8" />
+      <span>Try it out</span>
+    </a> -->
+  </div>
   <div class="max-w-6xl space-y-2">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {orderedSites.map((site) => <ShowcaseCard site={site} />)}
