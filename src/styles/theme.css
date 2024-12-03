@@ -1,19 +1,19 @@
 [data-theme="light"] {
-  --color-primary: theme("colors.pink.500");
-  --color-secondary: theme("colors.indigo.500");
-  --color-text: theme("colors.gray.900");
-  --color-text-offset: theme("colors.gray.600");
-  --color-background: theme("colors.gray.50");
-  --color-background-offset: theme("colors.gray.100");
-  --color-border: theme("colors.gray.900" / 10%);
+  --color-primary: #8D5EF2; /* Pink */
+  --color-secondary: #8D5EF2; /* Indigo */
+  --color-text: #1f2937; /* Gray 900 */
+  --color-text-offset: #404040; /* Gray 600 */
+  --color-background: #DFD0FB; /* Gray 50 */
+  --color-background-offset: #f3f4f6; /* Gray 100 */
+  --color-border: rgba(31, 41, 55, 0.1); /* Gray 900 with 10% opacity */
 }
 
 [data-theme="dark"] {
-  --color-primary: theme("colors.pink.400");
-  --color-secondary: theme("colors.indigo.400");
-  --color-text: theme("colors.gray.50");
-  --color-text-offset: theme("colors.gray.400");
-  --color-background: theme("colors.gray.900");
-  --color-background-offset: theme("colors.gray.800");
-  --color-border: theme("colors.gray.50" / 10%);
+  --color-primary: #8D5EF2; /* Pink */
+  --color-secondary: #8D5EF2; /* Indigo */
+  --color-text: #f9fafb; /* Gray 50 */
+  --color-text-offset: #CEBDF2; /* Gray 400 */
+  --color-background: #251d34; /* Gray 900 */
+  --color-background-offset: #9F79F2; /* Gray 800 */
+  --color-border: rgba(249, 250, 251, 0.1); /* Gray 50 with 10% opacity */
 }

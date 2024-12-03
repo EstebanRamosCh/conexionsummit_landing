@@ -7,6 +7,8 @@ a,
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent;
-  @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500;
+  background-clip: text;
+  -webkit-background-clip: text; /* Required for some browsers */
+  color: transparent;
+  background-image: linear-gradient(to bottom right, #8D5EF2, #B599F2, #9F79F2);
 }
