@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-custom)", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: "var(--color-primary)",
@@ -29,3 +29,4 @@ module.exports = {
   },
   plugins: [require("tailwindcss-fluid-type")],
 };
+
