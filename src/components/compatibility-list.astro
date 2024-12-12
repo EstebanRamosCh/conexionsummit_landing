@@ -12,7 +12,7 @@ const { items, title, url } = Astro.props;
 ---
 
 <div class="w-full max-w-6xl space-y-2">
-  <div class="relative border border-default bg-offset px-6 pb-4 pt-8">
+  <div class="relative border border-default bg-offset px-6 pb-4 pt-8 rounded-lg">
     <h3
       class="absolute right-4 top-0 -translate-y-1/2 rounded-full border border-current bg-default px-4 py-1 uppercase tracking-tight text-xs"
     >
@@ -22,16 +22,23 @@ const { items, title, url } = Astro.props;
       {
         items.map((item) => (
           <li>
-            <a class="flex flex-col items-center gap-2">
-              <Icon class="size-12" name={item.icon} />
-              <span>{item.title}</span>
+            <a class="flex flex-col items-center">
+              <Icon class="size-14" name={item.icon} />
+              {/* <span>{item.title}</span> */}
             </a>
           </li>
         ))
       }
     </ul>
   </div>
-  <p class="text-right text-sm">
+  <!-- <p class="text-right text-sm">
     <a class="text-primary" href={url}> ...and more &rarr;</a>
-  </p>
+  </p> -->
 </div>
+
+<style>
+  .size-14 {
+  width: 150px; /* or any desired size */
+  height: 150px;
+}
+</style>
